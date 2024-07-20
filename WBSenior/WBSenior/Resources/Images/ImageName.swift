@@ -10,4 +10,5 @@ import SwiftUI
 enum ImageName {
     static let authBackground = "auth.background"
     static let letterIcon = "letter.icon"
+    static let arrow = "arrrow"
 }
