@@ -23,11 +23,7 @@ public struct PhoneNumberTextField: View {
                         .onChange(of: model.phoneNumber, perform: { newValue in
                             if newValue.count > model.phoneNumberCount {
                                 model.phoneNumber = String(newValue.prefix(model.phoneNumberCount))
-                            } else {
-                                withAnimation {
-                                    model.phoneIsValid = true
-                                }
-                            }
+                            } 
                         })
                         .keyboardType(.numberPad)
                         .focused($isFocused)

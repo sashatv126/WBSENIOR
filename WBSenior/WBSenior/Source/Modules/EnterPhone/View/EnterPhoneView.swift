@@ -8,36 +8,37 @@
 import SwiftUI
 
 struct EnterPhoneView: View {
+    @EnvironmentObject var navigationStack: NavigationStack
     @State private var phoneModel = PhoneNumber(phoneNumber: "")
-    @State private var isPresentedEnterCode: Bool = false
 
     var body: some View {
-        AuthContainerView {
+        AuthContainer {
             VStack(spacing: .zero) {
                 title
-
+                
                 avatar
-
+                
                 subTitle
-
+                
                 PhoneNumberTextField(model: $phoneModel)
-                .padding(.top, 16)
-
+                    .padding(.top, 16)
+                    .padding(.bottom, 24)
+                
                 if !UIDevice.isIpad {
                     Spacer()
                 }
-
+                
                 WBButton(title: "Запросить код") {
                     withAnimation {
-                        phoneModel.validateFields()
-                        isPresentedEnterCode = phoneModel.phoneIsValid
+                        if phoneModel.phoneIsValid {
+                            navigationStack.push({
+                                EnterCodeView(phoneNumber: phoneModel.maskedPhoneNumber.replacingOccurrences(of: " ", with: ""))
+                            }, with: .present)
+                        }
                     }
                 }
             }
         }
-        .navigationDestination(isPresented: $isPresentedEnterCode, destination: {
-            EnterCodeView(phoneNumber: phoneModel.maskedPhoneNumber.replacingOccurrences(of: " ", with: ""))
-        })
         .hideKeyboardWithTapGesture()
     }
 }

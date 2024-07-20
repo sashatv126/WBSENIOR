@@ -11,7 +11,17 @@ import SwiftUI
 struct WBSeniorApp: App {
     var body: some Scene {
         WindowGroup {
-            EnterPhoneView()
+            ZStack {
+                if UIDevice.isIpad {
+                    Image(ImageName.authBackground)
+                        .resizable()
+                        .ignoresSafeArea(.all)
+                }
+
+                NavigationStackView {
+                    EnterPhoneView()
+                }
+            }
         }
     }
 }

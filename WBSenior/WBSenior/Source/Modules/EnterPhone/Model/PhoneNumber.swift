@@ -10,7 +10,9 @@ import Foundation
 struct PhoneNumber {
     private var phoneNumberMask: PhoneMask = PhoneMask(location: .ru)
     var phoneNumber: String
-    var phoneIsValid: Bool = true
+    var phoneIsValid: Bool {
+        !(phoneNumber.count < phoneNumberCount)
+    }
 
     init(phoneNumber: String) {
         self.phoneNumber = phoneNumber
@@ -36,9 +38,5 @@ struct PhoneNumber {
         }
 
         return formattedPhoneNumber
-    }
-
-    mutating func validateFields() {
-        phoneIsValid = !(phoneNumber.count < phoneNumberCount)
     }
 }
