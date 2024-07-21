@@ -25,6 +25,7 @@
 		CA37EC6C2C4D1E6800EA062E /* LocalizedBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37EC6B2C4D1E6800EA062E /* LocalizedBundle.swift */; };
 		CA37EC6E2C4D1ECB00EA062E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = CA37EC6D2C4D1ECB00EA062E /* Localizable.xcstrings */; };
 		CA37EC702C4D208600EA062E /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37EC6F2C4D208600EA062E /* LanguageManager.swift */; };
+		CA37EC742C4D266100EA062E /* Cargo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37EC732C4D266100EA062E /* Cargo.swift */; };
 		CA769C5C2C479E310027C8A9 /* WBSeniorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA769C5B2C479E310027C8A9 /* WBSeniorApp.swift */; };
 		CA769C602C479E320027C8A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA769C5F2C479E320027C8A9 /* Assets.xcassets */; };
 		CA769C632C479E320027C8A9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA769C622C479E320027C8A9 /* Preview Assets.xcassets */; };
@@ -64,6 +65,7 @@
 		CA37EC6B2C4D1E6800EA062E /* LocalizedBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedBundle.swift; sourceTree = "<group>"; };
 		CA37EC6D2C4D1ECB00EA062E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		CA37EC6F2C4D208600EA062E /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		CA37EC732C4D266100EA062E /* Cargo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cargo.swift; sourceTree = "<group>"; };
 		CA769C582C479E310027C8A9 /* WBSenior.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBSenior.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA769C5B2C479E310027C8A9 /* WBSeniorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBSeniorApp.swift; sourceTree = "<group>"; };
 		CA769C5F2C479E320027C8A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		CA37EC542C4D026300EA062E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CA37EC722C4D265000EA062E /* BitWiseAndSubscript */,
 				CA37EC622C4D1C7300EA062E /* l10nl18n */,
 				CA37EC5F2C4D0E8900EA062E /* CommonTestView */,
 				CA37EC572C4D02CA00EA062E /* AnyContainer.swift */,
@@ -171,6 +174,14 @@
 				CA37EC6F2C4D208600EA062E /* LanguageManager.swift */,
 			);
 			path = l10nl18n;
+			sourceTree = "<group>";
+		};
+		CA37EC722C4D265000EA062E /* BitWiseAndSubscript */ = {
+			isa = PBXGroup;
+			children = (
+				CA37EC732C4D266100EA062E /* Cargo.swift */,
+			);
+			path = BitWiseAndSubscript;
 			sourceTree = "<group>";
 		};
 		CA769C4F2C479E310027C8A9 = {
@@ -465,6 +476,7 @@
 				CA37EC6A2C4D1D7E00EA062E /* ContainerView.swift in Sources */,
 				CA769C9B2C47A2B50027C8A9 /* WBOTPTextField.swift in Sources */,
 				CA37EC532C4C65BB00EA062E /* NavigationType.swift in Sources */,
+				CA37EC742C4D266100EA062E /* Cargo.swift in Sources */,
 				CA769C952C47A2190027C8A9 /* EnterCodeView.swift in Sources */,
 				CA769C8F2C47A12A0027C8A9 /* BasicColor.swift in Sources */,
 				CA37EC642C4D1C9500EA062E /* DateFormatter + Extension.swift in Sources */,
