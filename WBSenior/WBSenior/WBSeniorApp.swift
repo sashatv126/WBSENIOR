@@ -19,7 +19,7 @@ struct WBSeniorApp: App {
                 }
 
                 NavigationStackView {
-                    EnterPhoneView()
+                    CommonTestView()
                 }
             }
         }
