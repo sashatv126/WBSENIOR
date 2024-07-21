@@ -19,7 +19,8 @@ struct WBSeniorApp: App {
                 }
 
                 NavigationStackView {
-                    CommonTestView()
+                    ContainerView()
+                        .environmentObject(LanguageManager())
                 }
             }
         }
