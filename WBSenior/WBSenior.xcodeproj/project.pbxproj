@@ -15,6 +15,11 @@
 		CA37EC4F2C4C657E00EA062E /* NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37EC4E2C4C657E00EA062E /* NavigationStack.swift */; };
 		CA37EC512C4C65A400EA062E /* NavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37EC502C4C65A400EA062E /* NavigationStackView.swift */; };
 		CA37EC532C4C65BB00EA062E /* NavigationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37EC522C4C65BB00EA062E /* NavigationType.swift */; };
+		CA37EC582C4D02CA00EA062E /* AnyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37EC572C4D02CA00EA062E /* AnyContainer.swift */; };
+		CA37EC5A2C4D02DB00EA062E /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37EC592C4D02DB00EA062E /* Container.swift */; };
+		CA37EC5C2C4D02E800EA062E /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37EC5B2C4D02E800EA062E /* Stack.swift */; };
+		CA37EC5E2C4D02F400EA062E /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37EC5D2C4D02F400EA062E /* Queue.swift */; };
+		CA37EC612C4D0EA100EA062E /* CommonTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37EC602C4D0EA100EA062E /* CommonTestView.swift */; };
 		CA769C5C2C479E310027C8A9 /* WBSeniorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA769C5B2C479E310027C8A9 /* WBSeniorApp.swift */; };
 		CA769C602C479E320027C8A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA769C5F2C479E320027C8A9 /* Assets.xcassets */; };
 		CA769C632C479E320027C8A9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA769C622C479E320027C8A9 /* Preview Assets.xcassets */; };
@@ -44,6 +49,11 @@
 		CA37EC4E2C4C657E00EA062E /* NavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStack.swift; sourceTree = "<group>"; };
 		CA37EC502C4C65A400EA062E /* NavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackView.swift; sourceTree = "<group>"; };
 		CA37EC522C4C65BB00EA062E /* NavigationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationType.swift; sourceTree = "<group>"; };
+		CA37EC572C4D02CA00EA062E /* AnyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyContainer.swift; sourceTree = "<group>"; };
+		CA37EC592C4D02DB00EA062E /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		CA37EC5B2C4D02E800EA062E /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		CA37EC5D2C4D02F400EA062E /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		CA37EC602C4D0EA100EA062E /* CommonTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTestView.swift; sourceTree = "<group>"; };
 		CA769C582C479E310027C8A9 /* WBSenior.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBSenior.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA769C5B2C479E310027C8A9 /* WBSeniorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBSeniorApp.swift; sourceTree = "<group>"; };
 		CA769C5F2C479E320027C8A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,6 +124,34 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		CA37EC542C4D026300EA062E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CA37EC5F2C4D0E8900EA062E /* CommonTestView */,
+				CA37EC572C4D02CA00EA062E /* AnyContainer.swift */,
+				CA37EC592C4D02DB00EA062E /* Container.swift */,
+				CA37EC552C4D026B00EA062E /* DataStructures */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CA37EC552C4D026B00EA062E /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				CA37EC5B2C4D02E800EA062E /* Stack.swift */,
+				CA37EC5D2C4D02F400EA062E /* Queue.swift */,
+			);
+			path = DataStructures;
+			sourceTree = "<group>";
+		};
+		CA37EC5F2C4D0E8900EA062E /* CommonTestView */ = {
+			isa = PBXGroup;
+			children = (
+				CA37EC602C4D0EA100EA062E /* CommonTestView.swift */,
+			);
+			path = CommonTestView;
+			sourceTree = "<group>";
+		};
 		CA769C4F2C479E310027C8A9 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +171,7 @@
 		CA769C5A2C479E310027C8A9 /* WBSenior */ = {
 			isa = PBXGroup;
 			children = (
+				CA37EC542C4D026300EA062E /* Common */,
 				CA37EC4A2C4C655900EA062E /* Navigation */,
 				CA769C912C47A1B00027C8A9 /* Info.plist */,
 				CA769C722C47A0020027C8A9 /* UIKit */,
@@ -388,22 +427,27 @@
 				CA769C782C47A0580027C8A9 /* WBGradient.swift in Sources */,
 				CA769C7C2C47A0D00027C8A9 /* UIDevice + Extension.swift in Sources */,
 				CA37EC432C4C428600EA062E /* EnterPhoneView.swift in Sources */,
+				CA37EC5C2C4D02E800EA062E /* Stack.swift in Sources */,
 				CA769C8B2C47A12A0027C8A9 /* BasicFont.swift in Sources */,
 				CA37EC4D2C4C656600EA062E /* Screen.swift in Sources */,
 				CA37EC4F2C4C657E00EA062E /* NavigationStack.swift in Sources */,
 				CA769CA12C47A48B0027C8A9 /* TimeButtonVIew.swift in Sources */,
+				CA37EC612C4D0EA100EA062E /* CommonTestView.swift in Sources */,
 				CA769C902C47A12A0027C8A9 /* ImageName.swift in Sources */,
 				CA37EC492C4C454A00EA062E /* PhoneNumber.swift in Sources */,
 				CA769C9B2C47A2B50027C8A9 /* WBOTPTextField.swift in Sources */,
 				CA37EC532C4C65BB00EA062E /* NavigationType.swift in Sources */,
 				CA769C952C47A2190027C8A9 /* EnterCodeView.swift in Sources */,
 				CA769C8F2C47A12A0027C8A9 /* BasicColor.swift in Sources */,
+				CA37EC5E2C4D02F400EA062E /* Queue.swift in Sources */,
 				CA37EC512C4C65A400EA062E /* NavigationStackView.swift in Sources */,
 				CA769C7A2C47A08D0027C8A9 /* AuthContainerView.swift in Sources */,
 				CA769C9E2C47A4090027C8A9 /* PhoneCode.swift in Sources */,
 				CA769C812C47A0F30027C8A9 /* View + Extension.swift in Sources */,
 				CA37EC452C4C44D900EA062E /* WBPhoneNumberTextField.swift in Sources */,
+				CA37EC5A2C4D02DB00EA062E /* Container.swift in Sources */,
 				CA769C5C2C479E310027C8A9 /* WBSeniorApp.swift in Sources */,
+				CA37EC582C4D02CA00EA062E /* AnyContainer.swift in Sources */,
 				CA769C992C47A2740027C8A9 /* WBButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
