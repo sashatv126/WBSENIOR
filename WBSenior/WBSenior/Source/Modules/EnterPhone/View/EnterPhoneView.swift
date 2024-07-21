@@ -33,7 +33,7 @@ struct EnterPhoneView: View {
                         if phoneModel.phoneIsValid {
                             navigationStack.push({
                                 EnterCodeView(phoneNumber: phoneModel.maskedPhoneNumber.replacingOccurrences(of: " ", with: ""))
-                            }, with: .present)
+                            }, with: .push)
                         }
                     }
                 }

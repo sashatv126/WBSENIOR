@@ -31,14 +31,12 @@ struct NavigationStackView<RootView: View>: View {
 
                     screen.content
                         .environmentObject(navigationStack)
-                        .id(screen.id)
                         .zIndex(Double(index + 1))
-                        .transition(transition(for: screen.navigationType))
-                }
 
+                }
+                .transition(transition(for: screen.navigationType))
             }
         }
-        .animation(.default, value: navigationStack.screens)
     }
 
     private func transition(for navigationType: NavigationType) -> AnyTransition {
